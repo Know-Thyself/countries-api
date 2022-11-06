@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-const Countries = () => {
-  const [countries, setCountries] = useState([]);
+const Countries = ({countries, setCountries, setCountriesData}) => {
   useEffect(() => {
 		const loadCountries = async () => {
 			if (!countries.length) {
@@ -10,6 +9,7 @@ const Countries = () => {
 					let data = await response.json();
 					data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 					setCountries(data);
+          setCountriesData(data)
 					console.log(countries);
 				} catch (err) {
 					console.error(err);
@@ -17,7 +17,7 @@ const Countries = () => {
 			}
 		};
 		loadCountries();
-	}, [countries]);
+	}, [countries, setCountries, setCountriesData]);
   return (
 		<main className='main'>
 			{countries.map((country) => {

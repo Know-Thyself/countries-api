@@ -3,6 +3,7 @@ import useLocalStorage from 'use-local-storage';
 import Header from './Header';
 import Countries from './Countries';
 import Search from './Search';
+import SelectRegion from './SelectRegion';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 				setCountries={setCountries}
 				countriesData={countriesData}
 			/>
+			<SelectRegion />
 			<Countries
 				countries={countries}
 				setCountries={setCountries}

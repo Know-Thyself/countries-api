@@ -21,7 +21,7 @@
 	--app-background: hsl(207, 26%, 17%);
 	--elements-bg: hsl(209, 23%, 22%);
 	--text-primary: hsl(0, 0%, 100%);
-	--light-mode-input: hsl(0, 0%, 52%);
+	--light-mode-input: hsl(0, 0%, 98%);
 }
 
 .App {
@@ -41,7 +41,7 @@ button {
 }
 
 .search-container {
-	width: 80%;
+	width: 90%;
   margin: auto;
 	border-radius: 7px;
   background-color: var(--elements-bg);
@@ -53,18 +53,33 @@ button {
 }
 
 .icon {
-	padding: 8px;
+	padding: 12px;
 	font-size: 20px;
 	color: var(--light-mode-input)
 }
 
 .search-bar {
-	padding: 8px 4px 8px 36px;
+  font-family: 'Nunito Sans', sans-serif;
+	padding: 12px 4px 12px 44px;
 	width: 100%;
 	font-size: 1rem;
 	border: 1px solid var(--white);
 	border-radius: 4px;
-	color: var(--light-mode-input)
+	color: var(--light-mode-input);
+  background-color: var(--elements-bg);
+}
+.select-box {
+  margin-left: 10%;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+.select,
+.select-options {
+  color: var(--text-primary);
+}
+#region-select-label {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text-primary);
 }
 .main {
 	width: 80%;

@@ -18,11 +18,16 @@ const Countries = ({countries, setCountries, setCountriesData}) => {
 		};
 		loadCountries();
 	}, [countries, setCountries, setCountriesData]);
+	const loadDetails = (e) => {
+		let countryFlag = e.currentTarget.firstChild.src;
+		let country = countries.filter(c => c.flags.png.includes(countryFlag));
+		console.log(country)
+	}
   return (
 		<main className='main'>
 			{countries.map((country) => {
 				return (
-					<div key={country.name.common} className='content-wrapper'>
+					<div key={country.name.common} className='content-wrapper' onClick={loadDetails}>
 						<img
 							src={country.flags.png}
 							alt={`${country.name.common} flag`}

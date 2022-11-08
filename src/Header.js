@@ -8,7 +8,7 @@ const Header = ({theme, setTheme}) => {
   return (
 		<header className='App-header'>
 			<h4 className='header-text'>Where in the world?</h4>
-			<button onClick={switchTheme}>
+			<button onClick={switchTheme} className='switch-theme'>
 				{theme === 'light' ? (
 					<i className='fa-regular fa-moon'></i>
 				) : (

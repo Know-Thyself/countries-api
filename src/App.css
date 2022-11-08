@@ -28,24 +28,24 @@
 	text-align: center;
 	background-color: var(--app-background);
 }
-button {
+.switch-theme {
 	border: none;
 	text-decoration: none;
 	background-color: var(--elements-bg);
 	color: var(--text-primary);
 	cursor: pointer;
-  margin-right: 2rem;
+	margin-right: 2rem;
 }
 .header-text {
-  margin-left: 2rem;
+	margin-left: 2rem;
 }
 
 .search-container {
 	width: 90%;
-  margin: auto;
+	margin: auto;
 	border-radius: 7px;
-  background-color: var(--elements-bg);
-  margin-bottom: 2rem;
+	background-color: var(--elements-bg);
+	margin-bottom: 2rem;
 }
 
 .search-container i {
@@ -55,32 +55,32 @@ button {
 .icon {
 	padding: 12px;
 	font-size: 20px;
-	color: var(--light-mode-input)
+	color: var(--light-mode-input);
 }
 
 .search-bar {
-  font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
 	padding: 12px 4px 12px 44px;
 	width: 100%;
 	font-size: 1rem;
 	border: 1px solid var(--white);
 	border-radius: 4px;
 	color: var(--light-mode-input);
-  background-color: var(--elements-bg);
+	background-color: var(--elements-bg);
 }
 .select-box {
-  font-family: 'Nunito Sans', sans-serif;
-  margin-left: 10%;
-  margin-bottom: 2rem;
+	font-family: 'Nunito Sans', sans-serif;
+	margin-left: 10%;
+	margin-bottom: 2rem;
 }
 .select {
-  color: var(--text-primary);
-  background: var(--elements-bg);
+	color: var(--text-primary);
+	background: var(--elements-bg);
 }
 
- #region-select-label {
-  color: var(--text-primary);
-  background: var(--elements-bg);
+#region-select-label {
+	color: var(--text-primary);
+	background: var(--elements-bg);
 }
 
 .main {
@@ -94,6 +94,7 @@ button {
 	width: 100%;
 	background-color: var(--elements-bg);
 	padding-bottom: 1.5rem;
+	cursor: pointer;
 }
 .flag {
 	width: 100%;
@@ -161,11 +162,14 @@ button {
 		margin-bottom: 2rem;
 	}
 	.icon {
-	padding: 10px;
-	font-size: 20px;
-}
+		padding: 10px;
+	}
 	.search-bar {
 		padding: 10px 4px 10px 44px;
+	}
+	.flag {
+		width: 100%;
+		height: 140px;
 	}
 }
 

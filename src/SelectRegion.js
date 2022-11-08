@@ -37,7 +37,7 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 			<FormControl fullWidth size='small'>
 				<InputLabel id='region-select-label'>Filter by Region</InputLabel>
 				<Select
-					style={{ height: 42 }}
+					style={{ height: 44 }}
 					sx={{
 						backgroundColor:
 							theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
@@ -91,6 +91,15 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 								},
 								'& .MuiMenuItem-root.Mui-selected:hover': {
 									backgroundColor: 'red',
+								},
+								'& .MuiPaper-root': {
+									background:
+										theme === 'light'
+											? 'hsl(0, 0%, 98%)'
+											: 'hsl(207, 26%, 17%)',
+								},
+								'& .MuiSelect-select': {
+									marginBottom: '18px',
 								},
 							},
 						},

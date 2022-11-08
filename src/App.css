@@ -69,18 +69,30 @@ button {
   background-color: var(--elements-bg);
 }
 .select-box {
+  font-family: 'Nunito Sans', sans-serif;
   margin-left: 10%;
   color: var(--text-primary);
   margin-bottom: 2rem;
+  background: var(--elements-bg);
 }
-.select,
-.select-options {
+
+ #region-select-label {
   color: var(--text-primary);
+  background: var(--elements-bg);
 }
-#region-select-label {
-  font-family: 'Nunito Sans', sans-serif;
-  color: var(--text-primary);
-}
+
+
+
+/* .MuiList-root,
+.MuiSelect-select,
+.MuiMenuItem-root {
+  background: hsl(209, 23%, 22%) !important;
+  color: hsl(0, 0%, 100%) !important;
+} */
+/* .MuiList-root,
+.MuiMenuItem-root {
+  background: hsl(207, 26%, 17%) !important;
+} */
 .main {
 	width: 80%;
 	margin: auto;

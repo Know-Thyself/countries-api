@@ -22,7 +22,12 @@ function App() {
 				setCountries={setCountries}
 				countriesData={countriesData}
 			/>
-			<SelectRegion />
+			<SelectRegion
+				theme={theme}
+				countries={countries}
+				setCountries={setCountries}
+				countriesData={countriesData}
+			/>
 			<Countries
 				countries={countries}
 				setCountries={setCountries}

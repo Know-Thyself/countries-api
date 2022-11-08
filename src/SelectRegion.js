@@ -11,6 +11,8 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 
 	const selectRegion = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
+		e.stopImmediatePropagation();
 		setRegion(e.target.value);
 		let filteredByRegion = countriesData.filter(
 			(country) => country.region === e.target.value
@@ -22,11 +24,13 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 		<Box
 			sx={{
 				width: 200,
-				background:
-					theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
-				color: theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
 				'& .MuiSvgIcon-root': {
 					color: 'var(--text-primary)',
+				},
+				'& .MuiMenuItem-root': {
+					backgroundColor:
+						theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
+					color: theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
 				},
 			}}
 			className='select-box'
@@ -34,9 +38,27 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 			<FormControl fullWidth>
 				<InputLabel id='region-select-label'>Filter by Region</InputLabel>
 				<Select
+					sx={{
+						backgroundColor:
+							theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
+						color: theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
+						'& .MuiMenuItem-gutters': {
+							backgroundColor: 'black',
+						},
+					}}
 					MenuProps={{
 						PaperProps: {
 							sx: {
+								'& .MuiMenuItem-root.Mui-selected': {
+									color:
+										theme === 'light'
+											? 'hsl(200, 15%, 8%)'
+											: 'hsl(0, 0%, 100%)',
+									backgroundColor:
+										theme === 'light'
+											? 'hsl(0, 0%, 100%)'
+											: 'hsl(209, 23%, 22%)',
+								},
 								'& .MuiMenuItem-root:hover': {
 									backgroundColor:
 										theme === 'light'
@@ -47,27 +69,44 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 											? 'hsl(0, 0%, 100%)'
 											: 'hsl(209, 23%, 22%)',
 								},
+								'& .MuiMenuItem-root': {
+									backgroundColor:
+										theme === 'light'
+											? 'hsl(0, 0%, 100%)'
+											: 'hsl(209, 23%, 22%)',
+									color:
+										theme === 'light'
+											? 'hsl(200, 15%, 8%)'
+											: 'hsl(0, 0%, 100%)',
+								},
+								'& .MuiMenuItem-root.Mui-selected:hover': {
+									backgroundColor: 'red',
+								},
+								
 							},
 						},
 					}}
 					labelId='region-select-label'
 					id='region-select'
 					value={region}
-					label='Filter by Region'
+					label={region}
 					className='select'
 					onChange={selectRegion}
+					area-selected='true'
 				>
 					{regions.map((region) => (
 						<MenuItem
 							sx={{
-								background:
+								backgroundColor:
 									theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
 								color:
 									theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
+									opacity: '1',
 							}}
 							className='select-options'
 							key={region}
 							value={region}
+							label={region}
 						>
 							{region}
 						</MenuItem>

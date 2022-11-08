@@ -12,7 +12,6 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 	const selectRegion = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
-		e.stopImmediatePropagation();
 		setRegion(e.target.value);
 		let filteredByRegion = countriesData.filter(
 			(country) => country.region === e.target.value
@@ -35,9 +34,10 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 			}}
 			className='select-box'
 		>
-			<FormControl fullWidth>
+			<FormControl fullWidth size='small'>
 				<InputLabel id='region-select-label'>Filter by Region</InputLabel>
 				<Select
+					style={{ height: 42 }}
 					sx={{
 						backgroundColor:
 							theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
@@ -79,10 +79,19 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 											? 'hsl(200, 15%, 8%)'
 											: 'hsl(0, 0%, 100%)',
 								},
+								'& .MuiList-root': {
+									backgroundColor:
+										theme === 'light'
+											? 'hsl(0, 0%, 100%)'
+											: 'hsl(209, 23%, 22%)',
+									color:
+										theme === 'light'
+											? 'hsl(200, 15%, 8%)'
+											: 'hsl(0, 0%, 100%)',
+								},
 								'& .MuiMenuItem-root.Mui-selected:hover': {
 									backgroundColor: 'red',
 								},
-								
 							},
 						},
 					}}
@@ -101,7 +110,7 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 									theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
 								color:
 									theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
-									opacity: '1',
+								opacity: '1',
 							}}
 							className='select-options'
 							key={region}

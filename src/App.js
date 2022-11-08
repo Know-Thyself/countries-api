@@ -17,17 +17,19 @@ function App() {
 	return (
 		<div className='App' data-theme={theme}>
 			<Header theme={theme} setTheme={setTheme} />
-			<Search
-				countries={countries}
-				setCountries={setCountries}
-				countriesData={countriesData}
-			/>
-			<SelectRegion
-				theme={theme}
-				countries={countries}
-				setCountries={setCountries}
-				countriesData={countriesData}
-			/>
+			<div className='search-and-select'>
+				<Search
+					countries={countries}
+					setCountries={setCountries}
+					countriesData={countriesData}
+				/>
+				<SelectRegion
+					theme={theme}
+					countries={countries}
+					setCountries={setCountries}
+					countriesData={countriesData}
+				/>
+			</div>
 			<Countries
 				countries={countries}
 				setCountries={setCountries}

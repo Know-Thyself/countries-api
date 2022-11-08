@@ -71,9 +71,7 @@ button {
 .select-box {
   font-family: 'Nunito Sans', sans-serif;
   margin-left: 10%;
-  /* color: var(--text-primary); */
   margin-bottom: 2rem;
-  /* background: var(--elements-bg); */
 }
 .select {
   color: var(--text-primary);
@@ -85,18 +83,6 @@ button {
   background: var(--elements-bg);
 }
 
-
-
-/* .MuiList-root,
-.MuiSelect-select,
-.MuiMenuItem-root {
-  background: hsl(209, 23%, 22%) !important;
-  color: hsl(0, 0%, 100%) !important;
-} */
-/* .MuiList-root,
-.MuiMenuItem-root {
-  background: hsl(207, 26%, 17%) !important;
-} */
 .main {
 	width: 80%;
 	margin: auto;
@@ -149,4 +135,42 @@ button {
 	height: 4rem;
 	width: 100%;
 	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 690px) {
+	.main {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1040px) {
+	.main {
+		grid-template-columns: repeat(3, 1fr);
+		width: 90%;
+	}
+	.search-and-select {
+		width: 90%;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.search-container {
+		width: 30%;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+	.icon {
+	padding: 10px;
+	font-size: 20px;
+}
+	.search-bar {
+		padding: 10px 4px 10px 44px;
+	}
+}
+
+@media screen and (min-width: 1340px) {
+	.main {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }

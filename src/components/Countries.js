@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Countries = ({ countries, setCountries, setCountriesData }) => {
+const Countries = ({ countries, setCountries, country, setCountry, setCountriesData }) => {
 	useEffect(() => {
 		const loadCountries = async () => {
 			if (!countries.length) {
@@ -11,7 +11,6 @@ const Countries = ({ countries, setCountries, setCountriesData }) => {
 					data.sort((a, b) => a.name.common.localeCompare(b.name.common));
 					setCountries(data);
 					setCountriesData(data);
-					console.log(countries);
 				} catch (err) {
 					console.error(err);
 				}
@@ -21,41 +20,47 @@ const Countries = ({ countries, setCountries, setCountriesData }) => {
 	}, [countries, setCountries, setCountriesData]);
 	const loadDetails = (e) => {
 		let countryFlag = e.currentTarget.firstChild.src;
-		let country = countries.filter((c) => c.flags.png.includes(countryFlag));
-		console.log(country);
+		let country1 = countries.filter((c) => c.flags.png.includes(countryFlag));
+		setCountry([...country1]);
+		console.log(country)
+		console.log(country1);
 	};
 	return (
-		<main className='main'>
-			{countries.map((country) => {
-				console.log(country);
+		<main className='main' key='countries'>
+			{countries.map((country, idx) => {
 				return (
-					<Link to='/details'>
-						<div
-							key={country.name.common}
-							className='content-wrapper'
-							onClick={loadDetails}
-						>
+					<Link
+						to='/details'
+						key={idx + 7}
+						style={{ color: 'inherit', textDecoration: 'inherit' }}
+					>
+						<div key={idx} className='content-wrapper' onClick={loadDetails}>
 							<img
+								key={idx}
 								src={country.flags.png}
 								alt={`${country.name.common} flag`}
 								className='flag'
 							/>
-							<h3 key={country.tId} className='country'>
+							<h3 key={idx + 1} className='country'>
 								{country.name.common}
 							</h3>
-							<p key={country.population} className='population'>
+							<p key={idx + 2} className='population'>
 								Population: &nbsp;
-								<span className='light-text'>
+								<span key={country.tId} className='light-text'>
 									{country.population.toLocaleString()}
 								</span>
 							</p>
-							<p key={country.region} className='region'>
+							<p key={idx + 3} className='region'>
 								Region: &nbsp;
-								<span className='light-text'>{country.region}</span>
+								<span key={idx + 4} className='light-text'>
+									{country.region}
+								</span>
 							</p>
-							<p key={country.capital} className='capital'>
+							<p key={idx + 5} className='capital'>
 								Capital: &nbsp;
-								<span className='light-text'>{country.capital}</span>
+								<span key={idx + 6} className='light-text'>
+									{country.capital}
+								</span>
 							</p>
 						</div>
 					</Link>

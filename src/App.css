@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaushan+Script&family=Lato&family=Marck+Script&family=Merriweather:ital@1&family=Montserrat:wght@300;800&family=Nunito+Sans:wght@300;600;800&family=Poppins&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaushan+Script&family=Lato&family=Marck+Script&family=Merriweather:ital@1&family=Montserrat:wght@300;800&family=Nunito+Sans:wght@200;300;600;800&family=Poppins&family=Rye&display=swap');
 
 /* :root {
   --light-mode-bg: hsl(0, 0%, 98%);
@@ -111,6 +111,9 @@ Link {
 	width: 100%;
 	height: 160px;
 }
+img:-moz-loading {
+  visibility: hidden;
+}
 .country,
 .population,
 .region,
@@ -132,7 +135,7 @@ Link {
 .light-text {
 	font-family: 'Nunito Sans', sans-serif;
 	color: var(--light-mode-input);
-	font-weight: 100;
+	font-weight: 200;
 }
 
 .App-header {
@@ -251,31 +254,46 @@ Link {
 	}
 	.country-details-wrapper {
 		display: grid;
+		width: 90%;
 		grid-template-columns: 1fr 2fr;
 		place-items: center;
 		background-color: var(--app-background);
-		height: 100%;
-		gap: 3rem;
+		gap: 4rem;
+		padding-bottom: 0;
+	}
+	.back-link {
+		margin: 4rem 5%;
 	}
 	.details-flag {
+    width: 100%;
 		height: 100%;
 	}
 	.text-and-buttons {
-		height: 90%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		margin: auto 0;
+		padding: 2rem 0;
 	}
 	.main-and-sub-text {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 2rem;
 	}
 	.main-text,
 	.sub-text {
 		margin-bottom: auto;
+	}
+	.border-countries {
+		flex-direction: row;
+	}
+	.borders {
+		flex-wrap: nowrap;
+	}
+	.border-countries .text {
+		white-space: nowrap;
 	}
 	.border {
 		background-color: var(--elements-bg);

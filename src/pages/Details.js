@@ -15,12 +15,12 @@ const Details = ({ country }) => {
 				let languages = Object.values(c.languages);
 				return (
 					<div key={i} className='country-details-wrapper'>
-						<img
-							className='details-flag'
-							key={i + 1}
-							src={c.flags.png}
-							alt={c.name.common}
-						/>
+							<img
+								className='details-flag'
+								key={i + 1}
+								src={c.flags.png}
+								alt={c.name.common}
+							/>
 						<div className='text-and-buttons'>
 							<div className='main-and-sub-text'>
 								<div className='main-text'>

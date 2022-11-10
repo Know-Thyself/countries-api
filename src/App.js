@@ -22,22 +22,13 @@ function App() {
 						exact
 						path='/'
 						element={
-							<Home
-								theme={theme}
-								country={country}
-								setCountry={setCountry}
-							/>
+							<Home theme={theme} country={country} setCountry={setCountry} />
 						}
 					/>
 					<Route
 						exact
 						path='/details'
-						element={
-							<Details
-								country={country}
-								setCountry={setCountry}
-							/>
-						}
+						element={<Details country={country} setCountry={setCountry} />}
 					/>
 				</Routes>
 			</BrowserRouter>

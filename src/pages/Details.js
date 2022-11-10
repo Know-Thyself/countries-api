@@ -1,7 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-// import Header from '../components/Header';
-import '../App.css';
 
 const Details = ({ country, setCountry }) => {
 	let url;
@@ -9,7 +6,6 @@ const Details = ({ country, setCountry }) => {
 		try {
 			const response = await fetch(url);
 			let data = await response.json();
-			console.log(data);
 			setCountry(data);
 		} catch (err) {
 			console.error(err);
@@ -23,7 +19,6 @@ const Details = ({ country, setCountry }) => {
 	};
 	return (
 		<div key='details'>
-			{/* <Header /> */}
 			<Link to='/' className='back-link'>
 				&#8592;&nbsp;Back
 			</Link>
@@ -80,13 +75,7 @@ const Details = ({ country, setCountry }) => {
 									</p>
 									<p className='languages text'>
 										Languages: &nbsp;
-										{languages.map((l, i) =>
-											i < languages.length - 1 ? (
-												<span className='light-text'>{l},&nbsp;</span>
-											) : (
-												<span className='light-text'>{l}</span>
-											)
-										)}
+										<span className='light-text'>{languages.join(', ')}</span>
 									</p>
 								</div>
 							</div>

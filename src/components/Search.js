@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Search = ({ countries, setCountries, countriesData }) => {
 	const searchCountry = (e) => {
 		let searchValue = e.target.value;

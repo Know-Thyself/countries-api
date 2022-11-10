@@ -1,6 +1,3 @@
-import React from 'react';
-import '../App.css';
-
 const Header = ({ theme, setTheme }) => {
 	const switchTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';

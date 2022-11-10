@@ -1,11 +1,12 @@
 import React from 'react';
+import '../App.css';
 
-const Header = ({theme, setTheme}) => {
+const Header = ({ theme, setTheme }) => {
 	const switchTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
 		setTheme(newTheme);
 	};
-  return (
+	return (
 		<header className='App-header'>
 			<h4 className='header-text'>Where in the world?</h4>
 			<button onClick={switchTheme} className='switch-theme'>
@@ -18,6 +19,6 @@ const Header = ({theme, setTheme}) => {
 			</button>
 		</header>
 	);
-}
+};
 
 export default Header;

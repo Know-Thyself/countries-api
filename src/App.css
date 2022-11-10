@@ -33,6 +33,7 @@
 	box-sizing: border-box;
 	position: relative;
 	min-height: 100vh;
+	padding-bottom: 2rem;
 }
 Link {
 	text-decoration: none;
@@ -106,6 +107,7 @@ Link {
 	background-color: var(--elements-bg);
 	padding-bottom: 1.5rem;
 	cursor: pointer;
+	border-radius: 4px;
 }
 .flag {
 	width: 100%;
@@ -229,6 +231,7 @@ img:-moz-loading {
 	.main {
 		grid-template-columns: repeat(3, 1fr);
 		width: 90%;
+		gap: 2.5rem;
 	}
 	.search-and-select {
 		width: 90%;
@@ -266,7 +269,7 @@ img:-moz-loading {
 	}
 	.details-flag {
     width: 100%;
-		height: 100%;
+		height: auto;
 	}
 	.text-and-buttons {
 		display: flex;
@@ -289,9 +292,9 @@ img:-moz-loading {
 	.border-countries {
 		flex-direction: row;
 	}
-	.borders {
+	/* .borders {
 		flex-wrap: nowrap;
-	}
+	} */
 	.border-countries .text {
 		white-space: nowrap;
 	}

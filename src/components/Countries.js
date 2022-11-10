@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Countries = ({ countries, setCountries, country, setCountry, setCountriesData }) => {
+const Countries = ({
+	countries,
+	setCountries,
+	country,
+	setCountry,
+	countriesData,
+	setCountriesData,
+}) => {
 	useEffect(() => {
 		const loadCountries = async () => {
 			if (!countries.length) {
@@ -22,7 +29,7 @@ const Countries = ({ countries, setCountries, country, setCountry, setCountriesD
 		let countryFlag = e.currentTarget.firstChild.src;
 		let country1 = countries.filter((c) => c.flags.png.includes(countryFlag));
 		setCountry([...country1]);
-		console.log(country)
+		console.log(country);
 		console.log(country1);
 	};
 	return (

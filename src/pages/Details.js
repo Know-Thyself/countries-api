@@ -3,7 +3,24 @@ import { Link } from 'react-router-dom';
 // import Header from '../components/Header';
 import '../App.css';
 
-const Details = ({ country }) => {
+const Details = ({ country, setCountry }) => {
+	let url;
+	const loadCountryDataByCode = async () => {
+		try {
+			const response = await fetch(url);
+			let data = await response.json();
+			console.log(data);
+			setCountry(data);
+		} catch (err) {
+			console.error(err);
+		}
+	};
+
+	const loadBorderCountry = (e) => {
+		let code = e.target.innerText;
+		url = `https://restcountries.com/v3.1/alpha/${code}`;
+		loadCountryDataByCode();
+	};
 	return (
 		<div key='details'>
 			{/* <Header /> */}
@@ -15,12 +32,12 @@ const Details = ({ country }) => {
 				let languages = Object.values(c.languages);
 				return (
 					<div key={i} className='country-details-wrapper'>
-							<img
-								className='details-flag'
-								key={i + 1}
-								src={c.flags.png}
-								alt={c.name.common}
-							/>
+						<img
+							className='details-flag'
+							key={i + 1}
+							src={c.flags.png}
+							alt={c.name.common}
+						/>
 						<div className='text-and-buttons'>
 							<div className='main-and-sub-text'>
 								<div className='main-text'>
@@ -78,7 +95,9 @@ const Details = ({ country }) => {
 								<div className='borders'>
 									{c.borders
 										? c.borders.map((b) => (
-												<button className='border'>{b}</button>
+												<button className='border' onClick={loadBorderCountry}>
+													{b}
+												</button>
 										  ))
 										: ''}
 								</div>

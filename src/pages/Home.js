@@ -35,6 +35,7 @@ function Home({ country, setCountry, theme }) {
 				countries={countries}
 				setCountries={setCountries}
 				setCountry={setCountry}
+				countriesData={countriesData}
 				setCountriesData={setCountriesData}
 			/>
 		</div>

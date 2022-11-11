@@ -114,7 +114,7 @@ Link {
 	height: 160px;
 }
 img:-moz-loading {
-  visibility: hidden;
+	visibility: hidden;
 }
 .country,
 .population,
@@ -154,8 +154,6 @@ img:-moz-loading {
 .country-details-wrapper {
 	width: 80%;
 	margin: auto;
-	/* display: flex;
-	flex-direction: column; */
 	background-color: var(--elements-bg);
 	text-align: left;
 	padding-bottom: 2rem;
@@ -199,16 +197,10 @@ img:-moz-loading {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/* display: grid;
-	grid-template-columns: repeat(3, 1fr); */
 	gap: 0.5rem;
-	/* padding-right: 1.5rem; */
-	/* display: flex; */
 	padding-left: 1.5rem;
 }
 .border {
-	/* width: 33%; */
-	/* display: inline-flex; */
 	margin: 0;
 	padding: 0.25rem 1.5rem;
 	font-family: 'Nunito Sans', sans-serif;
@@ -268,7 +260,7 @@ img:-moz-loading {
 		margin: 4rem 5%;
 	}
 	.details-flag {
-    width: 100%;
+		width: 100%;
 		height: auto;
 	}
 	.text-and-buttons {
@@ -292,9 +284,6 @@ img:-moz-loading {
 	.border-countries {
 		flex-direction: row;
 	}
-	/* .borders {
-		flex-wrap: nowrap;
-	} */
 	.border-countries .text {
 		white-space: nowrap;
 	}

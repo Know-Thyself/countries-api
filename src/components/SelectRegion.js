@@ -26,11 +26,6 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 				'& .MuiSvgIcon-root': {
 					color: 'var(--text-primary)',
 				},
-				'& .MuiMenuItem-root': {
-					backgroundColor:
-						theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
-					color: theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
-				},
 			}}
 			className='select-box'
 		>
@@ -59,25 +54,17 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 											? 'hsl(0, 0%, 100%)'
 											: 'hsl(209, 23%, 22%)',
 								},
-								'& .MuiMenuItem-root:hover': {
+								'& .MuiMenuItem-root.Mui-selected:hover': {
 									backgroundColor:
-										theme === 'light'
-											? 'hsl(200, 15%, 8%)'
-											: 'hsl(0, 0%, 100%)',
-									color:
 										theme === 'light'
 											? 'hsl(0, 0%, 100%)'
 											: 'hsl(209, 23%, 22%)',
 								},
-								'& .MuiMenuItem-root': {
+								'& .MuiMenuItem-root:hover': {
 									backgroundColor:
 										theme === 'light'
-											? 'hsl(0, 0%, 100%)'
-											: 'hsl(209, 23%, 22%)',
-									color:
-										theme === 'light'
-											? 'hsl(200, 15%, 8%)'
-											: 'hsl(0, 0%, 100%)',
+											? 'hsl(0, 0%, 98%)'
+											: 'hsl(207, 26%, 17%)',
 								},
 								'& .MuiList-root': {
 									backgroundColor:
@@ -88,18 +75,6 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 										theme === 'light'
 											? 'hsl(200, 15%, 8%)'
 											: 'hsl(0, 0%, 100%)',
-								},
-								'& .MuiMenuItem-root.Mui-selected:hover': {
-									backgroundColor: 'red',
-								},
-								'& .MuiPaper-root': {
-									background:
-										theme === 'light'
-											? 'hsl(0, 0%, 98%)'
-											: 'hsl(207, 26%, 17%)',
-								},
-								'& .MuiSelect-select': {
-									marginBottom: '18px',
 								},
 							},
 						},
@@ -114,13 +89,6 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 				>
 					{regions.map((region) => (
 						<MenuItem
-							sx={{
-								backgroundColor:
-									theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
-								color:
-									theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
-								opacity: '1',
-							}}
 							className='select-options'
 							key={region}
 							value={region}

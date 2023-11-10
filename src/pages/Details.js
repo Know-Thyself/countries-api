@@ -1,30 +1,30 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Details = ({ country, setCountry }) => {
-	let url;
+	let url
 	const loadCountryDataByCode = async () => {
 		try {
-			const response = await fetch(url);
-			let data = await response.json();
-			setCountry(data);
+			const response = await fetch(url)
+			let data = await response.json()
+			setCountry(data)
 		} catch (err) {
-			console.error(err);
+			console.error(err)
 		}
-	};
+	}
 
-	const loadBorderCountry = (e) => {
-		let code = e.target.innerText;
-		url = `https://restcountries.com/v3.1/alpha/${code}`;
-		loadCountryDataByCode();
-	};
+	const loadBorderCountry = e => {
+		let code = e.target.innerText
+		url = `https://restcountries.com/v3.1/alpha/${code}`
+		loadCountryDataByCode()
+	}
 	return (
 		<div key='details'>
 			<Link to='/' className='back-link'>
-				&#8592;&nbsp;Back
+				<i class='fa-solid fa-arrow-left'></i>&nbsp;&nbsp; Back
 			</Link>
 			{country.map((c, i) => {
-				let nativeName = Object.values(Object.values(c.name)[2]);
-				let languages = Object.values(c.languages);
+				let nativeName = Object.values(Object.values(c.name)[2])
+				let languages = Object.values(c.languages)
 				return (
 					<div key={i} className='country-details-wrapper'>
 						<img
@@ -83,7 +83,7 @@ const Details = ({ country, setCountry }) => {
 								<p className='text'>Border Countries: &nbsp;</p>
 								<div className='borders'>
 									{c.borders
-										? c.borders.map((b) => (
+										? c.borders.map(b => (
 												<button className='border' onClick={loadBorderCountry}>
 													{b}
 												</button>
@@ -93,10 +93,10 @@ const Details = ({ country, setCountry }) => {
 							</div>
 						</div>
 					</div>
-				);
+				)
 			})}
 		</div>
-	);
-};
+	)
+}
 
-export default Details;
+export default Details

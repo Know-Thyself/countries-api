@@ -11,165 +11,177 @@
 } */
 
 :root {
-	--app-background: hsl(0, 0%, 98%);
-	--elements-bg: hsl(0, 0%, 100%);
-	--text-primary: hsl(200, 15%, 8%);
-	--light-mode-input: hsl(0, 0%, 52%);
+    --app-background: hsl(0, 0%, 98%);
+    --elements-bg: hsl(0, 0%, 100%);
+    --text-primary: hsl(200, 15%, 8%);
+    --light-mode-input: hsl(0, 0%, 52%);
 }
 
 [data-theme='dark'] {
-	--app-background: hsl(207, 26%, 17%);
-	--elements-bg: hsl(209, 23%, 22%);
-	--text-primary: hsl(0, 0%, 100%);
-	--light-mode-input: hsl(0, 0%, 98%);
+    --app-background: hsl(207, 26%, 17%);
+    --elements-bg: hsl(209, 23%, 22%);
+    --text-primary: hsl(0, 0%, 100%);
+    --light-mode-input: hsl(0, 0%, 98%);
 }
 
 .App,
 .details {
-	text-align: center;
-	background-color: var(--app-background);
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	position: relative;
-	min-height: 100vh;
-	padding-bottom: 2rem;
+    text-align: center;
+    background-color: var(--app-background);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 2rem;
 }
+
 Link {
-	text-decoration: none;
-	color: inherit;
-	text-decoration: inherit;
+    text-decoration: none;
+    color: inherit;
+    text-decoration: inherit;
 }
+
 .switch-theme {
-	border: none;
-	text-decoration: none;
-	background-color: var(--elements-bg);
-	color: var(--text-primary);
-	cursor: pointer;
-	margin-right: 2rem;
+    border: none;
+    text-decoration: none;
+    background-color: var(--elements-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    margin-right: 2rem;
 }
+
 .header-text {
-	margin-left: 2rem;
+    margin-left: 2rem;
 }
 
 .search-container {
-	width: 90%;
-	margin: auto;
-	border-radius: 7px;
-	background-color: var(--elements-bg);
-	margin-bottom: 2rem;
+    width: 90%;
+    margin: auto;
+    border-radius: 7px;
+    background-color: var(--elements-bg);
+    margin-bottom: 2rem;
 }
 
 .search-container i {
-	position: absolute;
+    position: absolute;
 }
 
 .icon {
-	padding: 12px;
-	font-size: 20px;
-	color: var(--light-mode-input);
+    padding: 12px;
+    font-size: 20px;
+    color: var(--light-mode-input);
 }
 
 .search-bar {
-	font-family: 'Nunito Sans', sans-serif;
-	padding: 12px 4px 12px 44px;
-	width: 100%;
-	font-size: 1rem;
-	border: 1px solid var(--white);
-	border-radius: 4px;
-	color: var(--light-mode-input);
-	background-color: var(--elements-bg);
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 12px 4px 12px 44px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    color: var(--light-mode-input);
+    background-color: var(--elements-bg);
 }
+
 .select-box {
-	font-family: 'Nunito Sans', sans-serif;
-	margin-left: 10%;
-	margin-bottom: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-left: 10%;
+    margin-bottom: 2rem;
 }
+
 .select {
-	color: var(--text-primary);
-	background: var(--elements-bg);
+    color: var(--text-primary);
+    background: var(--elements-bg);
 }
 
 #region-select-label {
-	color: var(--text-primary);
-	background: var(--elements-bg);
+    color: var(--text-primary);
+    background: var(--elements-bg);
 }
 
 .main {
-	width: 80%;
-	margin: auto;
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	gap: 2rem;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
 }
+
 .content-wrapper {
-	width: 100%;
-	background-color: var(--elements-bg);
-	padding-bottom: 1.5rem;
-	cursor: pointer;
-	border-radius: 4px;
+    width: 100%;
+    background-color: var(--elements-bg);
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
 }
+
 .flag {
-	width: 100%;
-	height: 160px;
+    width: 100%;
+    height: 160px;
 }
+
 img:-moz-loading {
-	visibility: hidden;
+    visibility: hidden;
 }
+
 .country,
 .population,
 .region,
 .capital,
 .text {
-	text-align: left;
-	padding-left: 1.5rem;
-	font-family: 'Nunito Sans', sans-serif;
-	color: var(--text-primary);
-	font-weight: 600;
-	margin: 0;
+    text-align: left;
+    padding-left: 1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0;
 }
 
 .country {
-	font-weight: 800;
-	margin: 0.85rem 0;
+    font-weight: 800;
+    margin: 0.85rem 0;
 }
 
 .light-text {
-	font-family: 'Nunito Sans', sans-serif;
-	color: var(--light-mode-input);
-	font-weight: 200;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--light-mode-input);
+    font-weight: 200;
 }
 
 .App-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--elements-bg);
-	color: var(--text-primary);
-	height: 4rem;
-	width: 100%;
-	margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--elements-bg);
+    color: var(--text-primary);
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .country-details-wrapper {
-	width: 80%;
-	margin: auto;
-	background-color: var(--elements-bg);
-	text-align: left;
-	padding-bottom: 2rem;
+    width: 80%;
+    margin: auto;
+    background-color: var(--elements-bg);
+    text-align: left;
+    padding-bottom: 2rem;
 }
+
 .back-link {
-	display: block;
-	width: max-content;
-	margin-bottom: 2rem;
-	text-align: left;
-	margin-left: 10%;
-	text-decoration: none;
-	color: var(--text-primary);
-	background-color: var(--elements-bg);
-	padding: 0.25rem 1.5rem;
-	border-radius: 4px;
+    display: block;
+    width: max-content;
+    margin-bottom: 2rem;
+    text-align: left;
+    margin-left: 10%;
+    text-decoration: none;
+    color: var(--text-primary);
+    background-color: var(--elements-bg);
+    padding: 0.5rem 2.5rem;
+    border-radius: 4px;
+    align-self: center;
 }
+
 .text-and-buttons,
 .details-flag,
 .main-and-sub-text,
@@ -177,123 +189,139 @@ img:-moz-loading {
 .sub-text,
 .border-countries,
 .borders {
-	width: 100%;
-	margin: auto;
+    width: 100%;
+    margin: auto;
 }
+
 .main-text,
 .sub-text {
-	margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .border-countries {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .borders {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	padding-left: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
 }
+
 .border {
-	margin: 0;
-	padding: 0.25rem 1.5rem;
-	font-family: 'Nunito Sans', sans-serif;
-	font-size: 12px;
-	background-color: var(--app-background);
-	color: var(--text-primary);
-	border: none;
-	text-decoration: none;
-	border-radius: 4px;
-	cursor: pointer;
+    margin: 0;
+    padding: 0.25rem 1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    background-color: var(--app-background);
+    color: var(--text-primary);
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 690px) {
-	.main {
-		grid-template-columns: repeat(2, 1fr);
-	}
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (min-width: 1040px) {
-	.main {
-		grid-template-columns: repeat(3, 1fr);
-		width: 90%;
-		gap: 2.5rem;
-	}
-	.search-and-select {
-		width: 90%;
-		margin: auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.search-container {
-		width: 30%;
-		margin: 0;
-		margin-bottom: 2rem;
-	}
-	.icon {
-		padding: 10px;
-	}
-	.search-bar {
-		padding: 10px 4px 10px 44px;
-	}
-	.flag {
-		width: 100%;
-		height: 140px;
-	}
-	.country-details-wrapper {
-		display: grid;
-		width: 90%;
-		grid-template-columns: 1fr 2fr;
-		place-items: center;
-		background-color: var(--app-background);
-		gap: 4rem;
-		padding-bottom: 0;
-	}
-	.back-link {
-		margin: 4rem 5%;
-	}
-	.details-flag {
-		width: 100%;
-		height: auto;
-	}
-	.text-and-buttons {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: auto 0;
-		padding: 2rem 0;
-	}
-	.main-and-sub-text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 2rem;
-	}
-	.main-text,
-	.sub-text {
-		margin-bottom: auto;
-	}
-	.border-countries {
-		flex-direction: row;
-	}
-	.border-countries .text {
-		white-space: nowrap;
-	}
-	.border {
-		background-color: var(--elements-bg);
-	}
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        gap: 2.5rem;
+    }
+
+    .search-and-select {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-container {
+        width: 30%;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .icon {
+        padding: 10px;
+    }
+
+    .search-bar {
+        padding: 10px 4px 10px 44px;
+    }
+
+    .flag {
+        width: 100%;
+        height: 140px;
+    }
+
+    .country-details-wrapper {
+        display: grid;
+        width: 90%;
+        grid-template-columns: 1fr 2fr;
+        place-items: center;
+        background-color: var(--app-background);
+        gap: 4rem;
+        padding-bottom: 0;
+    }
+
+    .back-link {
+        margin: 4rem 5%;
+    }
+
+    .details-flag {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-and-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto 0;
+        padding: 2rem 0;
+    }
+
+    .main-and-sub-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .main-text,
+    .sub-text {
+        margin-bottom: auto;
+    }
+
+    .border-countries {
+        flex-direction: row;
+    }
+
+    .border-countries .text {
+        white-space: nowrap;
+    }
+
+    .border {
+        background-color: var(--elements-bg);
+    }
 }
 
 @media screen and (min-width: 1340px) {
-	.main {
-		grid-template-columns: repeat(4, 1fr);
-	}
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

@@ -84,6 +84,10 @@ Link {
     background-color: var(--elements-bg);
 }
 
+::placeholder {
+    color: var(--text-primary);
+}
+
 .select-box {
     font-family: 'Nunito Sans', sans-serif;
     margin-left: 10%;
@@ -114,11 +118,18 @@ Link {
     padding-bottom: 1.5rem;
     cursor: pointer;
     border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.content-wrapper:hover {
+    transform: scale(1.1);
 }
 
 .flag {
     width: 100%;
     height: 160px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 img:-moz-loading {

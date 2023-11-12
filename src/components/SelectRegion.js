@@ -1,23 +1,23 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import * as React from 'react'
+import Box from '@mui/material/Box'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
 
-const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
-	const [region, setRegion] = React.useState('');
-	const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+const SelectRegion = ({ theme, setCountries, countriesData }) => {
+	const [region, setRegion] = React.useState('')
+	const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
-	const selectRegion = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
-		setRegion(e.target.value);
+	const selectRegion = e => {
+		e.preventDefault()
+		e.stopPropagation()
+		setRegion(e.target.value)
 		let filteredByRegion = countriesData.filter(
-			(country) => country.region === e.target.value
-		);
-		setCountries(filteredByRegion);
-	};
+			country => country.region === e.target.value
+		)
+		setCountries(filteredByRegion)
+	}
 
 	return (
 		<Box
@@ -25,6 +25,8 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 				width: 200,
 				'& .MuiSvgIcon-root': {
 					color: 'var(--text-primary)',
+					backgroundColor: 'var(--elements-bg)',
+					border: 'none',
 				},
 			}}
 			className='select-box'
@@ -35,11 +37,13 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 					style={{ height: 44 }}
 					sx={{
 						backgroundColor:
-							theme === 'light' ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)',
+							theme === 'light' ? '#EEEEEE' : 'hsl(209, 23%, 22%)',
 						color: theme === 'light' ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)',
 						'& .MuiMenuItem-gutters': {
 							backgroundColor: 'black',
 						},
+						boxShadow: 'none',
+						'.MuiOutlinedInput-notchedOutline': { border: 0 },
 					}}
 					MenuProps={{
 						PaperProps: {
@@ -86,8 +90,9 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 					className='select'
 					onChange={selectRegion}
 					area-selected='true'
+					disableUnderline='true'
 				>
-					{regions.map((region) => (
+					{regions.map(region => (
 						<MenuItem
 							className='select-options'
 							key={region}
@@ -100,7 +105,7 @@ const SelectRegion = ({ theme, countries, setCountries, countriesData }) => {
 				</Select>
 			</FormControl>
 		</Box>
-	);
-};
+	)
+}
 
-export default SelectRegion;
+export default SelectRegion

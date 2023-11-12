@@ -4,7 +4,7 @@ import Search from '../components/Search';
 import SelectRegion from '../components/SelectRegion';
 import '../App.css';
 
-function Home({ country, setCountry, theme }) {
+function Home({ setCountry, theme }) {
 	const [countries, setCountries] = useState([]);
 	const [countriesData, setCountriesData] = useState([]);
 	return (
@@ -17,8 +17,6 @@ function Home({ country, setCountry, theme }) {
 				/>
 				<SelectRegion
 					theme={theme}
-					countries={countries}
-					country={country}
 					setCountries={setCountries}
 					countriesData={countriesData}
 				/>
